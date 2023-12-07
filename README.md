@@ -6,6 +6,8 @@ Running the application:
 1) Install Flask and Flask-SQLAlchemy:
 code: pip install Flask Flask-SQLAlchemy
 
+( "virtualenv venv" and ".\venv\Scripts\activate" to run in virtual environment)
+
 2) Run the application:
 code: python app.py
 
