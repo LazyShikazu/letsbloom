@@ -53,11 +53,17 @@ Ex: I'm using this command on Powershell : Invoke-RestMethod -Method PUT -Uri "h
 
 Like above you can use POSTMAN or bash(CURL) to PUT as well
 
-4) Delete Book (DELETE/api/books/{id}):
+4) Delete Book (DELETE /api/books/{id}):
 
 Description: Deletes the specific book in the library, This is not needed according to the requirements of the assignment. But did it just for the sake of it. 
+Request: DELETE /api/books/{id}
 
-I also wanted to write the code where I can get the ID of any book using title or author, since it's out of scope did'nt write the code for it.
+Additional Notes:
+I also wanted to write the code where I can get the ID of any book using title or author(So it becomes easier to Update an existing book or delete a specific book), since it's out of scope didn't write it.
+
+Author:
+Rajesh Narravula(2014CE10360).
+
 
 
 
