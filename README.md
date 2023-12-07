@@ -63,6 +63,22 @@ Request: DELETE /api/books/{id}
 Additional Notes:
 I also wanted to write the code where I can get the ID of any book using title or author(So it becomes easier to Update an existing book or delete a specific book), since it's out of scope didn't write it.
 
+I also tried to solve the DevOPs question, but couldn't do it in limited time. This is the docker file I could come up with:
+
+# Stage 1: Build the Go application
+FROM golang:1.21.3-alpine AS build
+LABEL stage=builder
+WORKDIR /app
+COPY . .
+RUN CGO_ENABLED=0 GOOS=linux go build -o app
+
+# Stage 2: Create a minimal image to run the application
+FROM alpine:latest
+WORKDIR /app
+COPY --from=build /app/app .
+EXPOSE 8080
+CMD ["./app"]
+
 Author:
 Rajesh Narravula(2014CE10360).
 
